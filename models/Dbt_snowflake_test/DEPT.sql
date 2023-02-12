@@ -1,2 +1,14 @@
-{{ config(materilazed="table") }}
-select 'RAJARAO',101
+{{
+  config(
+    materialized='table'
+  )
+}}
+
+{{
+  sql
+}}
+CREATE TABLE {{ ref('DEPT') }} 
+(
+  DEPTNO int,
+  DEPTNAME varchar(20)
+)
